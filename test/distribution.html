@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+</style>
+<script src="https://d3plus.org/js/d3plus.v2.0.0-alpha.30.full.min.js"></script>
+<script type="module" defer>
+  import { seededNumbers } from "../pkg/mod.js";
+
+  let numbers = seededNumbers(Math.floor(Math.random() * 100000));
+  const next = () => {
+    let seededNumber = numbers.next().value;
+    let color = seededNumber % 256;
+    return color;
+  };
+
+  // let data = [];
+  let map = new Map();
+
+  for (let i = 0; i < 10000; i++) {
+    let val = next();
+
+    if (!map.has(val)) {
+      map.set(val, 0);
+    }
+    map.set(val, map.get(val) + 1);
+  }
+
+  new d3plus.BarChart()
+    .config({
+      data: [...map.entries()],
+      groupBy: 0,
+      x: 0,
+      y: 1,
+      xSort: (a, b) => a[1] - b[1],
+      legend: false,
+      labels: false,
+      tooltip: false,
+      dataCutoff: 0,
+    })
+    .render();
+</script>

@@ -1,0 +1,26 @@
+{
+  "type": "module",
+  "name": "seeded-numbers",
+  "version": "1.0.0",
+  "description": "generate psuedorandom numbers from a seed",
+  "main": "pkg/mod.js",
+  "types": "mod.ts",
+  "esnext": "pkg/mod.js",
+  "files": [
+    "pkg/*",
+    "mod.ts"
+  ],
+  "repository": "https://github.com/Brecert/seeded-numbers",
+  "author": "bree",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "test": "deno test",
+    "test:randomness": "yarn build && servor ./ ./test/distribution.html",
+    "prepare": "yarn test && yarn build"
+  },
+  "devDependencies": {
+    "servor": "^4.0.2",
+    "typescript": "^4.1.2"
+  }
+}
