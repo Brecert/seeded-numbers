@@ -3,6 +3,9 @@
 ## Usage
 ```js
 import { seededNumbers } from 'seeded-numbers';
+// or
+import { seededNumbers } from 'https://deno.land/x/seeded_numbers/mod.ts';
+
 
 let numbers = seededNumbers(0xB733);
 assert(numbers.next().value === 2121607608);

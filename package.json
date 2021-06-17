@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "seeded-numbers",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "generate psuedorandom numbers from a seed",
   "main": "publish/mod.js",
   "types": "mod.ts",
