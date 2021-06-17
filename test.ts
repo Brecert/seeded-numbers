@@ -1,7 +1,7 @@
 import {
   assert,
   assertEquals,
-} from "https://deno.land/std@0.79.0/testing/asserts.ts";
+} from "https://deno.land/std@0.99.0/testing/asserts.ts";
 import { seededNumbers } from "./mod.ts";
 
 Deno.test("[seededNumbers] random enough", () => {
@@ -12,7 +12,7 @@ Deno.test("[seededNumbers] random enough", () => {
       let value = numbers.next().value;
       assert(
         !unique.has(value),
-        `loop:[${a}:${b}] number already used: ${value}`
+        `loop:[${a}:${b}] number already used: ${value}`,
       );
       unique.add(value);
     }

@@ -3,11 +3,11 @@
   "name": "seeded-numbers",
   "version": "1.0.1",
   "description": "generate psuedorandom numbers from a seed",
-  "main": "pkg/mod.js",
+  "main": "publish/mod.js",
   "types": "mod.ts",
-  "esnext": "pkg/mod.js",
+  "esnext": "publish/mod.js",
   "files": [
-    "pkg/*",
+    "publish/*",
     "mod.ts"
   ],
   "repository": "https://github.com/Brecert/seeded-numbers",

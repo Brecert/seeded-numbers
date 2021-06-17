@@ -12,7 +12,7 @@ const clamp32 = (n: bigint) => BigInt.asUintN(32, n);
  * Based on [PCG32](https://www.pcg-random.org)
  * @param seed seed to use for generating the psuedorandom sequence
  */
-export function* seededNumbers(seed: number | BigInt) {
+export function* seededNumbers(seed: number | bigint) {
   let rng = BigInt(seed);
 
   let value = 0n;
